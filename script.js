@@ -1,5 +1,15 @@
 const searchBtn = document.getElementById("searchBtn");
 
+const godInput = document.getElementById("godInput");
+godInput.addEventListener("keypress", function(event) {
+  // Verifica se a tecla pressionada foi "Enter"
+  if (event.key === "Enter") {
+    // Cancela o comportamento padrão (se necessário) e clica no botão
+    // event.preventDefault();
+    searchBtn.click();
+  }
+});
+
 searchBtn.addEventListener("click", () => {
     const godName = document
         .getElementById("godInput")
