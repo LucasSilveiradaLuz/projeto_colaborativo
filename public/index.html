@@ -2,29 +2,12 @@
 <html>
 <head>
     <title>Busca Mitológica</title>
-    <style>
-        body {
-            font-family: Arial;
-            padding: 20px;
-        }
-
-        .card {
-            margin-top: 20px;
-            border: 1px solid #ccc;
-            padding: 15px;
-            border-radius: 8px;
-            width: 300px;
-        }
-
-        img {
-            width: 120px;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Buscar Deus</h1>
+<div class="base">
+    <h1>Busca Mitológica</h1>
 
     <input type="text" id="godInput" placeholder="Digite o nome do deus">
     <button id="searchBtn">Buscar</button>
@@ -32,11 +15,12 @@
     <div class="card">
         <img id="imagem" src="" alt="">
         <h2 id="nome"></h2>
+        <p><i><span id="categoria"></span></i></p>
         <p><strong>Domínio:</strong> <span id="dominio"></span></p>
         <p><strong>Símbolo:</strong> <span id="poderes"></span></p>
     </div>
+</div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

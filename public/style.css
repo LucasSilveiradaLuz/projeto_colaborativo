@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    /* Imagem de fundo */
+    background-image: url('https://i.pinimg.com/1200x/81/0a/6c/810a6cb768f9804060cc5193f4f5837d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.base {
+    background-color: rgba(255, 255, 255, 0.85); /* Branco com 85% de opacidade */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 60%;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2978a7;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1c6691;
+}
+
+.card {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(206, 206, 206, 0.5);
+}
+
+img {
+    width: 150px;
+    height: auto;
+    border-radius: 45%;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

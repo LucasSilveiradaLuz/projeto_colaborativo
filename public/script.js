@@ -1,5 +1,14 @@
 const searchBtn = document.getElementById("searchBtn");
 
+const godInput = document.getElementById("godInput");
+godInput.addEventListener("keypress", function(event) {
+  // Verifica se a tecla pressionada foi "Enter"
+  if (event.key === "Enter") {
+    // Clica no botão
+    searchBtn.click();
+  }
+});
+
 searchBtn.addEventListener("click", () => {
     const godName = document
         .getElementById("godInput")
@@ -7,7 +16,7 @@ searchBtn.addEventListener("click", () => {
         .trim()
         .toLowerCase();
 
-    fetch("db.json")
+    fetch("/db.json")
         .then(response => response.json())
         .then(data => {
 
@@ -24,6 +33,7 @@ searchBtn.addEventListener("click", () => {
             document.getElementById("nome").innerText = god.name;
             document.getElementById("dominio").innerText = god.domain;
             document.getElementById("poderes").innerText = god.symbol;
+            document.getElementById("categoria").innerText = god.category;
 
             // 🔥 BUSCA IMAGEM NA WIKIPEDIA AUTOMATICAMENTE
             return fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${god.name}`)
@@ -34,7 +44,7 @@ searchBtn.addEventListener("click", () => {
                         document.getElementById("imagem").src = wikiData.thumbnail.source;
                     } else {
                         document.getElementById("imagem").src =
-                            "https://via.placeholder.com/200?text=Sem+Imagem";
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaIuyhIU_4sTcggWqJptRxBJ6o4YnqXqTr3A&s";
                     }
                 });
 
