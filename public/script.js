@@ -4,8 +4,7 @@ const godInput = document.getElementById("godInput");
 godInput.addEventListener("keypress", function(event) {
   // Verifica se a tecla pressionada foi "Enter"
   if (event.key === "Enter") {
-    // Cancela o comportamento padrão (se necessário) e clica no botão
-    // event.preventDefault();
+    // Clica no botão
     searchBtn.click();
   }
 });
@@ -17,7 +16,7 @@ searchBtn.addEventListener("click", () => {
         .trim()
         .toLowerCase();
 
-    fetch("db.json")
+    fetch("/db.json")
         .then(response => response.json())
         .then(data => {
 
